@@ -1,3 +1,4 @@
+from ssl import Options
 import discord
 import os
 from dotenv import load_dotenv
@@ -27,10 +28,19 @@ async def on_message(message):
     if message.content == '$hello':
         await message.channel.send('hello!!!')
 
-@rbot.slash_command()        #Flips a coin
-async def coinflip(ctx: discord.ApplicationContext,guild_ids=[965657683153793205]):
+@rbot.slash_command(guild_ids=[1017094174316699769])        #Flips a coin
+async def coinflip(ctx: discord.ApplicationContext):
     """Flips a coin."""
     c = ["HEADS!","TAILS!"]
-    await ctx.send(random.choice(c))
+    await ctx.respond("Flipping a coin!")
+    await ctx.send(f"Result: {random.choice(c)}")
+
+@rbot.slash_command(guild_ids=[1017094174316699769])        #Flips a coin
+async def spin(ctx: discord.ApplicationContext,  number: discord.Option(str,name= "number", required=True)):
+    """Spins a roulette."""
+    await ctx.respond("Spinning the roulette!")
+    await ctx.send(f"Result: {random.randint(1,int(number))}")
+
+
 
 rbot.run(os.getenv('token'))
