@@ -8,7 +8,7 @@ This bot comes with 4 basic commands:
 >Flips a coin.
 
 >## /spin (number)
-> Spins a roulette with the given amount of numbers .
+> Spins a roulette with the given amount of numbers.
 
 >## /tf
 >Shows four random spanish cards to play a game called twenty four.
