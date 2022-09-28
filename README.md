@@ -10,9 +10,9 @@ This bot comes with 4 basic commands:
 >## /spin (number)
 > Spins a roulette with the given amount of numbers.
 
->## /tf
->Shows four random spanish cards to play a game called twenty four.
-Basically the idea of this game is to take the four numbers of the cards and make math operations between them to get to 24.
+>## /24
+>Shows four random numbers to play a game called twenty four.
+Basically the idea of this game is to take the four numbers and make math operations between them to get to 24.
 >
 >E.g given the cards 12,6,5 and 2: (6-5)*2*12=24.
 
