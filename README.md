@@ -20,7 +20,7 @@ Basically the idea of this game is to take the four numbers and make math operat
 >Displays information about the bot. 
 
 # How to add the bot.
-To add the bot simply use this [link]([www.google.com](https://discord.com/api/oauth2/authorize?client_id=1018497578721095721&permissions=534723946560&scope=bot)) and select the server to which you want to add the bot.
+To add the bot simply use this [link](https://discord.com/api/oauth2/authorize?client_id=1018497578721095721&permissions=534723946560&scope=bot) and select the server to which you want to add the bot.
 
 
 
