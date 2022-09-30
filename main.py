@@ -44,12 +44,12 @@ class Menu(discord.ui.View):         #Creates a menu with two buttons
         super().__init__()
         self.value = None
 
-    @discord.ui.button(label="New Cards.",style=discord.ButtonStyle.blurple)  #First button: gives new numbers
+    @discord.ui.button(label="New Numbers.",style=discord.ButtonStyle.blurple)  #First button: gives new numbers
     async def menu1(self,button: discord.ui.Button, interaction: discord.Interaction):
         embed = discord.Embed(color=discord.Color.random())
         embed.add_field(name=f"{random.randint(1,12)}                    {random.randint(1,12)}",value="----------------",inline=False)
         embed.add_field(name=f"{random.randint(1,12)}                    {random.randint(1,12)}",value="----------------",inline=False)
-        await interaction.response.edit_message(embed=embed,content="These are your new cards:")
+        await interaction.response.edit_message(embed=embed,content="These are your new numbers:")
 
     @discord.ui.button(label="End Game.",style=discord.ButtonStyle.grey)      #Second button: finishes the manu
     async def menu2(self,button: discord.ui.Button, interaction: discord.Interaction):
@@ -61,11 +61,11 @@ class Menu(discord.ui.View):         #Creates a menu with two buttons
 
 @rbot.slash_command(name="24")      #Runs the menu
 async def menu(ctx):
-    """Shows four random spanish cards to play 24."""
+    """Shows four random numbers to play 24."""
     view = Menu()
     embed = discord.Embed(color=discord.Color.random())
     embed.add_field(name=f"{random.randint(1,12)}                    {random.randint(1,12)}",value="----------------",inline=False)
     embed.add_field(name=f"{random.randint(1,12)}                    {random.randint(1,12)}",value="----------------",inline=False)
-    await ctx.respond("These are your cards:",view=view,embed=embed)
+    await ctx.respond("These are your numbers:",view=view,embed=embed)
 
 rbot.run(os.getenv('token'))  #Runs the bot with the token in the .env
